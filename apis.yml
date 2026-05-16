@@ -1,18 +1,133 @@
 aid: rabobank
-url: https://raw.githubusercontent.com/api-evangelist/rabobank/refs/heads/main/apis.yml
 name: Rabobank
-type: Index
+description: >-
+  Rabobank is a Dutch multinational banking and financial services company
+  organized as a cooperative with a strong focus on the food and agriculture
+  sector. It serves retail, business, corporate, and wholesale customers in
+  the Netherlands and operates a global Food & Agribusiness practice through
+  Rabobank Wholesale & Rural and the Rabobank Group internationally. Rabobank
+  publishes a developer portal at docs.developer.rabobank.com (legacy URL
+  developer.rabobank.nl redirects there) exposing PSD2-mandated open banking
+  APIs (Account Information, Payment Initiation, Funds Confirmation) as well
+  as Premium / Beyond-PSD2 commercial APIs for corporate cash management and
+  notifications, with sandbox endpoints for development and a regulated
+  production tier under PSD2 Strong Customer Authentication. Underlying
+  schemes are aligned with the Berlin Group NextGenPSD2 XS2A Framework.
+kind: company
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Financial
   - Banks
+  - Banking
+  - Open Banking
+  - PSD2
+  - Berlin Group
   - Agriculture
+  - Cooperative
   - European Banking
-description: 'A Dutch multinational banking and financial services company with a strong focus on the food and agriculture sector. Operates as a cooperative bank serving millions of customers in the Netherlands and globally.'
+  - Netherlands
+url: https://raw.githubusercontent.com/api-evangelist/rabobank/refs/heads/main/apis.yml
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-09'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: rabobank:account-information
+    name: Rabobank Account Information API (PSD2 AIS)
+    description: >-
+      PSD2-compliant Account Information Service. Returns account lists,
+      balances, and transaction history for Rabobank payment accounts after
+      the account-holder grants explicit consent. Aligned with the Berlin
+      Group NextGenPSD2 XS2A specification and used by licensed AISPs.
+    humanURL: https://docs.developer.rabobank.com/
+    baseURL: https://api.rabobank.nl/openapi/sandbox/payments/account-information
+    tags:
+      - PSD2
+      - Account Information
+      - AIS
+      - Berlin Group
+      - Open Banking
+    properties:
+      - type: DeveloperPortal
+        url: https://docs.developer.rabobank.com/
+  - aid: rabobank:payment-initiation
+    name: Rabobank Payment Initiation API (PSD2 PIS)
+    description: >-
+      PSD2-compliant Payment Initiation Service. Allows licensed PISPs to
+      initiate SEPA Credit Transfers, SEPA Instant Credit Transfers, and
+      cross-border payments from a customer's Rabobank account after Strong
+      Customer Authentication. Aligned with the Berlin Group NextGenPSD2
+      XS2A specification.
+    humanURL: https://docs.developer.rabobank.com/
+    baseURL: https://api.rabobank.nl/openapi/sandbox/payments/payment-initiation
+    tags:
+      - PSD2
+      - Payment Initiation
+      - PIS
+      - SEPA
+      - Berlin Group
+      - Open Banking
+    properties:
+      - type: DeveloperPortal
+        url: https://docs.developer.rabobank.com/
+  - aid: rabobank:funds-confirmation
+    name: Rabobank Funds Confirmation API (PSD2 PIIS / CBPII)
+    description: >-
+      PSD2-compliant Funds Confirmation Service. Card-issuer payment service
+      providers (CBPIIs) can confirm whether a specific amount is available
+      on a Rabobank payment account at the time of a card-based payment.
+    humanURL: https://docs.developer.rabobank.com/
+    baseURL: https://api.rabobank.nl/openapi/sandbox/payments/funds-confirmation
+    tags:
+      - PSD2
+      - Funds Confirmation
+      - PIIS
+      - CBPII
+    properties:
+      - type: DeveloperPortal
+        url: https://docs.developer.rabobank.com/
+  - aid: rabobank:premium-payments
+    name: Rabobank Premium Payments / SEPA Credit Transfer API
+    description: >-
+      Commercial premium API for corporate cash management - initiating SEPA
+      Credit Transfers and SEPA Instant Credit Transfers on a contracted
+      Rabobank corporate account without per-payment customer SCA, intended
+      for ERP / treasury / accounting integrations.
+    humanURL: https://docs.developer.rabobank.com/
+    baseURL: https://api.rabobank.nl/openapi/sandbox/payments/sepa-credit-transfer
+    tags:
+      - SEPA
+      - Payments
+      - Corporate
+      - Premium
+      - Cash Management
+    properties:
+      - type: DeveloperPortal
+        url: https://docs.developer.rabobank.com/
+  - aid: rabobank:notifications
+    name: Rabobank Notifications API
+    description: >-
+      Real-time event-notification API delivering payment, account, and
+      consent state changes to a registered callback or webhook endpoint
+      for integrated corporate and TPP applications.
+    humanURL: https://docs.developer.rabobank.com/
+    baseURL: https://api.rabobank.nl/openapi/sandbox/notifications
+    tags:
+      - Notifications
+      - Webhooks
+      - Events
+      - Real-Time
+    properties:
+      - type: DeveloperPortal
+        url: https://docs.developer.rabobank.com/
 common:
   - type: Website
     url: https://www.rabobank.com/
+  - type: DeveloperPortal
+    url: https://docs.developer.rabobank.com/
+  - type: LegacyDeveloperPortal
+    url: https://developer.rabobank.nl/
+  - type: Standard
+    url: https://www.berlin-group.org/nextgenpsd2-downloads
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

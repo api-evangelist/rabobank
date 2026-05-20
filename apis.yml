@@ -120,6 +120,10 @@ apis:
       - type: DeveloperPortal
         url: https://docs.developer.rabobank.com/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/rabobank
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/rabobank
   - type: Website
     url: https://www.rabobank.com/
   - type: DeveloperPortal

@@ -120,6 +120,8 @@ apis:
       - type: DeveloperPortal
         url: https://docs.developer.rabobank.com/
 common:
+  - type: DomainSecurity
+    url: security/rabobank-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/rabobank
   - type: LinkedIn

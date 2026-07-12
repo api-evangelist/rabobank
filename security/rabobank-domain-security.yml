@@ -1,0 +1,42 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.rabobank.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 20 23:59:59 2027 GMT
+  hsts: null
+- host: docs.developer.rabobank.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 17 23:59:59 2026 GMT
+  hsts: null
+- host: api.rabobank.nl
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan  6 23:59:59 2027 GMT
+  hsts: null
+domains:
+- domain: rabobank.com
+  dnssec: true
+  caa:
+  - 0 iodef "mailto:Certificate.Operations@rabobank.com"
+  - 0 issue "sectigo.com"
+  - 0 issue "digicert.com"
+  - 0 issue "quovadisglobal.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: rabobank.nl
+  dnssec: true
+  caa:
+  - 0 iodef "mailto:Certificate.Operations@rabobank.com"
+  - 0 issue "visa.com"
+  - 0 issue "digicert.com"
+  - 0 issue "quovadisglobal.com"
+  - 0 issue "amazon.com"
+  - 0 issue "sectigo.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

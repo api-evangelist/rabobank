@@ -40,7 +40,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/rabobank/refs/heads/main/apis.yml
 created: '2026-05-05'
 modified: '2026-05-09'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: rabobank:account-information
     name: Rabobank Account Information API (PSD2 AIS)

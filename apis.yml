@@ -123,6 +123,11 @@ apis:
     humanURL: https://docs.developer.rabobank.com/
     baseURL: https://api.rabobank.nl/openapi/sandbox/notifications
     tags:
+      - Notification
+      - Webhook
+      - Event
+      - Real-Time
+    tags_raw:
       - Notifications
       - Webhooks
       - Events

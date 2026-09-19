@@ -84,6 +84,13 @@ apis:
     tags:
       - PSD2
       - Payment Initiation
+      - PI
+      - SEPA
+      - Berlin Group
+      - Open Banking
+    tags_raw:
+      - PSD2
+      - Payment Initiation
       - PIS
       - SEPA
       - Berlin Group

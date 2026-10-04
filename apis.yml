@@ -38,6 +38,17 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rabobank.png
 tags:
+  - Finance
+  - Banks
+  - Banking
+  - Open Banking
+  - PSD2
+  - Berlin Group
+  - Agriculture
+  - Cooperative
+  - European Banking
+  - Netherlands
+tags_raw:
   - Financial
   - Banks
   - Banking

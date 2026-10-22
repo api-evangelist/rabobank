@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/rabobank/integrations
 - https://n8n.io/integrations/rabobank/
@@ -10,7 +10,45 @@ checked:
 - https://monid.ai/tools/rabobank
 - https://n8n.io/integrations/rabobank/
 - https://zapier.com/apps/rabobank/integrations
+- https://portal.mvp.bafin.de/database/InstInfo/
+- https://www.dnb.nl/en/public-register/
+- https://www.finma.ch/en/finma-public/authorised-institutions-individuals-and-products/
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: DNB public register (supervised institutions, Netherlands)
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.dnb.nl/en/public-register/
+  category: Dutch financial supervisory licence (DNB)
+  contract_reference:
+    register: DNB public register (supervised institutions, Netherlands)
+    spec_file: null
+    standard: null
+    role: licensed-participant
+    registrations:
+    - registered_name: Coöperatieve Rabobank U.A.
+      licences:
+      - banks
+      - 2:108 Branch banking to EEA
+      - 2:110 Provision of bank services to EEA
+      - 2:111 Branch banking to non-EEA
+      register_country: NL
+      matched_domain: rabobank.com
+      matched_by: domain
+      brand: Rabobank Zuid en Oost Twente
+      register_id: DNB B0600
+      lei: DG3RU1DBUFHT4ZF9WN62
+      identity: wikidata Q252004 (LEI P1278) P856 https://www.rabobank.com/
+    signal_note: 'participation only: a supervisory licence / authorisation; no API conformance is published by
+      this register'
+    detected_by: sweep-dach-financial-registers.py
+    detected: '2026-10-21'
+    identity_source: wikidata P856 (LEI P1278 or name; labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-dach-financial-registers.py
+  first_seen: '2026-10-21'
 templates: []
